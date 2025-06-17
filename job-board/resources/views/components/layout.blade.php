@@ -9,6 +9,6 @@
 
     </head>
     <body>
-        <div class = "text-2xl"> This should be a surprise? </div>
+        {{$slot}}
     </body>
 </html>
