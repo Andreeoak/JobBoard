@@ -1,3 +1,3 @@
-<div>
-    <!-- Always remember that you are absolutely unique. Just like everyone else. - Margaret Mead -->
+<div {{$attributes->class(["rounded-md border-slate-300 bg-white p-4 shadow-sm"])}}>
+        {{$slot}}
 </div>

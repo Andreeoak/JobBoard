@@ -1,5 +1,7 @@
 <x-layout>
     @foreach ( $jobs as $job)
-        <div class = "rounded-md border-slate-300 bg-white p-4 shadow-sm mb-4">{{$job->title}}</div>
+        <x-card class="mb-4">
+            {{$job->title}}
+        </x-card>
     @endforeach
 </x-layout>
