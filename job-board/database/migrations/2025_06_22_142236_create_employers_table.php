@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('company_name');
             $table->foreignIdFor(\App\Models\User::class)->constrained();
+            $table->timestamps();
         });
 
         Schema::table('jobs', function(Blueprint $table){
@@ -27,9 +28,14 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table("jobs", function (Blueprint $table){
-            $table->dropForeignIdFor(\App\Models\Employer::class);
+        Schema::table('jobs', function (Blueprint $table) {
+            // Remove a foreign key primeiro
+            $table->dropForeign(['employer_id']);
+
+            // Depois remove a coluna
+            $table->dropColumn('employer_id');
         });
+
         Schema::dropIfExists('employers');
     }
 };
