@@ -31,8 +31,11 @@ class AuthController extends Controller
         }
     }
 
-    public function destroy(string $id)
+    public function destroy()
     {
-        //
+        Auth::logout();
+        request()->session()->invalidate(); //Protection against session fixation
+        request()->session()->regenerate(); //regenerate the csrf token (garantees the old session cannot be used by a third party)
+        return redirect('/');
     }
 }
