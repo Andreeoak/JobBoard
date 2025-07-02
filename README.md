@@ -5,6 +5,7 @@ JobBoard é uma aplicação web desenvolvida com Laravel que conecta candidatos 
 
 
 🚀 Funcionalidades
+<br>
 - 📋 Listagem pública de vagas
 
 - 🧑‍💼 Cadastro de empregadores e publicação de vagas
@@ -17,8 +18,9 @@ JobBoard é uma aplicação web desenvolvida com Laravel que conecta candidatos 
 
 - 🔍 Breadcrumbs e interface intuitiva via Blade Components
   
-
+<br>
 🧠 Tecnologias e Padrões Utilizados
+<br>
 
 - ⚙️ Framework e Estrutura
   
@@ -34,8 +36,10 @@ JobBoard é uma aplicação web desenvolvida com Laravel que conecta candidatos 
 
 > Route Model Binding para acesso direto a modelos nas controllers
 
+<br>
 
 🔐 Segurança e Autenticação
+<br>
 
 - Autenticação de usuários com auth e controle de sessões
 
@@ -43,30 +47,33 @@ JobBoard é uma aplicação web desenvolvida com Laravel que conecta candidatos 
 
 - Policies (ex: apply) para autorização baseada em contexto de usuário
 
-
+<br>
 🧰 Validação e Regras de Negócio
+<br>
 - Uso de Form Requests (JobRequest) para validação centralizada
 
 - Proteção contra acessos não autorizados e submissões inválidas
 
 - Separação clara entre usuários autenticados e visitantes com @auth / @guest
 
-
+<br>
 🧩 Componentização
+<br>
 - UI modular com Blade Components reutilizáveis
 
 - Campos com <x-label>, <x-text-input>, <x-radio-group>, etc.
 
 - Padrão DRY aplicado a formulários e cards de vagas
 
-
+<br>
 🔄 Fluxos e Experiência
+<br>
 - Redirecionamentos amigáveis com feedback (with('success', ...))
 
 - Breadcrumbs dinâmicos com links gerados por rotas nomeadas
 
 - Mensagens condicionais personalizadas (ex: "você já se candidatou")
-
+<br>
 
 ```
 job-board/
@@ -86,8 +93,9 @@ job-board/
      └── web.php
 
 ```
-
+<br>
 📚 Como rodar o projeto
+<br>
 
 ```bash
 git clone https://github.com/Andreeoak/JobBoard.git
