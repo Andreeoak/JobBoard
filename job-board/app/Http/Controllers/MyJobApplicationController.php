@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\JobApplication;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MyJobApplicationController extends Controller
 {
@@ -11,10 +12,10 @@ class MyJobApplicationController extends Controller
     {
         return view("my_job_applications.index",
         [
-                'applications'=>\Illuminate\Support\Facades\Auth::user()->jobApplications()
+                'applications'=>Auth::user()->jobApplications()
                 ->with([
                     'job' => function($q) {
-                        $q->withCount('jobApplications')->withAvg('jobApplications', 'expected_salary');
+                        $q->withCount('jobApplications')->withAvg('jobApplications', 'expected_salary')->withTrashed();
                     },
                     'job.employer'
                 ])->latest()->get()

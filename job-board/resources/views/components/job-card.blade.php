@@ -10,6 +10,9 @@
         <div class="flex space-x-4">
             <div>{{$job->employer->company_name}}</div>
             <div>{{$job->location}}</div>
+            @if($job->deleted_at)
+                <span class="text-red-400">The employer has closed this position</span>
+            @endif
         </div>
         <div class="flex space-x-1 text-xs">
             <x-tag>
