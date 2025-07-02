@@ -110,10 +110,6 @@ php artisan migrate --seed
 php artisan serve
 ```
 
----
-
-Se quiser, posso gerar uma [versão em inglês do README](f), adicionar [badges de status e CI/CD](f), ou sugerir uma [estrutura para documentar contribuições externas](f).
-
 
 # Compila os assets com Vite em modo desenvolvimento
 npm run dev
