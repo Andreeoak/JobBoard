@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('job_applications', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->constrained();
-            $table->foreignIdFor(Job::class)->constrained();
+            $table->foreignIdFor(Job::class)->constrained()
+            ->onDelete('cascade'); // Ensures that if a job is deleted, all related applications are also deleted
 
             $table->unsignedInteger('expected_salary');
             $table->timestamps();

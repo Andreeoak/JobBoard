@@ -34,14 +34,9 @@ class MyJobController extends Controller
         return view('my_job.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(JobRequest $request, JobRequest $jobRequest)
+   public function store(JobRequest $request)
     {
-
         Auth::user()->employer->jobs()->create($request->validated());
-
         return redirect()->route('my-jobs.index')->with('success', 'Job created successfully.');
     }
 
@@ -78,8 +73,11 @@ class MyJobController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Job $myJob)
     {
-        //
+        $this->authorize('delete', $myJob);
+        $myJob->delete();
+        return redirect()->route('my-jobs.index')
+            ->with('success', 'Job deleted successfully.');
     }
 }
