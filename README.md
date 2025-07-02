@@ -1,4 +1,6 @@
 💼 JobBoard
+
+<br>
 JobBoard é uma aplicação web desenvolvida com Laravel que conecta candidatos e empregadores por meio de uma plataforma simples e eficiente para publicação e candidatura de vagas. O projeto é focado em boas práticas de desenvolvimento, arquitetura limpa e componentes reutilizáveis.
 
 
