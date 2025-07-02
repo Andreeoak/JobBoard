@@ -108,8 +108,6 @@ php artisan migrate --seed
 
 # Inicia o servidor local
 php artisan serve
-```
-
 
 # Compila os assets com Vite em modo desenvolvimento
 npm run dev
