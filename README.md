@@ -1,6 +1,4 @@
-Claro! Aqui está seu conteúdo do `README.md` com espaçamento limpo, formatação Markdown correta e título principal destacado:
 
----
 
 # 💼 **JobBoard**
 
